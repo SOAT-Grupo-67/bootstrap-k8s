@@ -30,7 +30,7 @@ jobs:
         uses: azure/setup-kubectl@v3
 
       - name: Atualiza kubeconfig
-        run: aws eks update-kubeconfig --region us-east-1 --name tc4-k8s-cluster
+        run: aws eks update-kubeconfig --region us-east-1 --name hackathon-k8s-cluster
 
       - name: Renderizar dinâmicamente secrets AWS
         run: |
