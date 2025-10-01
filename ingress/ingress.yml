@@ -8,14 +8,14 @@ spec:
   rules:
     - http:
         paths:
-          - path: /api/clipo
+          - path: /video
             pathType: Prefix
             backend:
               service:
                 name: hackathon-clipo-service
                 port:
                   number: 80
-          - path: /api/users
+          - path: /user
             pathType: Prefix
             backend:
               service:
