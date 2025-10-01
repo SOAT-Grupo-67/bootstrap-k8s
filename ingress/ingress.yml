@@ -8,17 +8,24 @@ spec:
   rules:
     - http:
         paths:
+          - path: /users
+            pathType: Prefix
+            backend:
+              service:
+                name: hackathon-users-service
+                port:
+                  number: 80
+          - path: /auth
+            pathType: Prefix
+            backend:
+              service:
+                name: hackathon-users-service
+                port:
+                  number: 80
           - path: /video
             pathType: Prefix
             backend:
               service:
                 name: hackathon-clipo-service
-                port:
-                  number: 80
-          - path: /user
-            pathType: Prefix
-            backend:
-              service:
-                name: hackathon-users-service
                 port:
                   number: 80
