@@ -1,6 +1,5 @@
 name: Deploy manifests
 on: 
-    workflow_dispatch:
     push:
       branches:
         ["main"]
